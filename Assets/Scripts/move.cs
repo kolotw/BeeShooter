@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class move : MonoBehaviour
 {
-    public float 速度 = 3f;
+    public float 速度 = 2f;
     Vector3 pos;
     public GameObject myBullet;
-    public Transform firePos;
-
+    public Transform firePosA;
+    public Transform firePosB;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,8 +47,8 @@ public class move : MonoBehaviour
         // fire bullet
         if (Input.GetKeyUp(KeyCode.Space)) 
         {
-            Instantiate(myBullet, firePos.position, Quaternion.identity);
-
+            Instantiate(myBullet, firePosA.position, Quaternion.identity);
+            Instantiate(myBullet, firePosB.position, Quaternion.identity);
         }
     }
 }
