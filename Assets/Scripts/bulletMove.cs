@@ -8,7 +8,7 @@ public class bulletMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 速度, ForceMode.Impulse);
+        //this.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 速度, ForceMode.Impulse);
         //this.gameObject.GetComponent<Rigidbody>().velocity = Vector3.up * 速度;
         Destroy(gameObject,2f);
     }
@@ -16,6 +16,6 @@ public class bulletMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //this.transform.Translate(Vector3.up * 速度 * Time.deltaTime);
+        this.transform.Translate(Vector3.up * 速度 * Time.deltaTime);
     }
 }

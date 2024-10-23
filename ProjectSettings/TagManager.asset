@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - "\u6211\u65B9\u5B50\u5F48"
+  - "\u6575\u65B9\u5B50\u5F48"
+  - "\u6575\u4EBA"
   layers:
   - Default
   - TransparentFX
@@ -12,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - bullet
   - 
   - 
   - 

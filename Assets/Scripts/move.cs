@@ -9,10 +9,11 @@ public class move : MonoBehaviour
     public GameObject myBullet;
     public Transform firePosA;
     public Transform firePosB;
+    public int 血量 = 30;
+
     // Start is called before the first frame update
     void Start()
     {
-        //print("Hello world");
         pos = transform.position;
     }
 
@@ -49,6 +50,22 @@ public class move : MonoBehaviour
         {
             Instantiate(myBullet, firePosA.position, Quaternion.identity);
             Instantiate(myBullet, firePosB.position, Quaternion.identity);
+        }
+
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("敵方子彈"))
+        {
+            Destroy(other.gameObject);
+            血量--;
+            if(血量 <= 0)
+            {
+                Destroy(this.gameObject);
+                print("輸了");
+            }
         }
     }
 }
